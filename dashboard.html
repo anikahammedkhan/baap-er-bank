@@ -19,7 +19,7 @@
         <section class="w-3/4 text-center mx-auto mt-16 grid grid-cols-3">
             <div class="bg-blue-400 mx-3 rounded-lg py-10">
                 <h2 class="text-2xl text-white">Deposit</h2>
-                <p class="text-5xl text-white">$<span>00</span></p>
+                <p class="text-5xl text-white">$<span id="previous-deposit-value">00</span></p>
             </div>
             <div class="bg-orange-400 mx-3 rounded-lg py-10">
                 <h2 class="text-2xl text-white">Withdraw</h2>
@@ -27,16 +27,17 @@
             </div>
             <div class="bg-green-400 mx-3 rounded-lg py-10">
                 <h2 class="text-2xl text-white">Balance</h2>
-                <p class="text-5xl text-white">$<span>1240</span></p>
+                <p class="text-5xl text-white">$<span id="previous-balance-value">1240</span></p>
             </div>
         </section>
         <section class="w-3/4 mx-auto mt-12 grid grid-cols-2">
             <div class="bg-cyan-400 mx-3 py-10 text-center rounded-lg">
                 <h1 class="text-2xl font-medium mb-4 text-white">Please Deposit</h1>
-                <input type="text" name="" id="" class="block w-3/4 mx-auto rounded-lg px-5 py-3 mb-4"
+                <input type="text" name="" id="deposit-input" class="block w-3/4 mx-auto rounded-lg px-5 py-3 mb-4"
                     placeholder="Please Input Deposit Amount">
                 <button
-                    class="bg-gradient-to-r from-purple-500 to-pink-500 w-3/4 py-2 rounded-lg text-white font-medium hover:bg-gradient-to-l">Deposit</button>
+                    class="bg-gradient-to-r from-purple-500 to-pink-500 w-3/4 py-2 rounded-lg text-white font-medium hover:bg-gradient-to-l"
+                    id="btn-deposit">Deposit</button>
             </div>
             <div class="bg-yellow-400 mx-3 py-10 text-center rounded-lg">
                 <h1 class="text-2xl font-medium mb-4 text-white">Withdraw</h1>
@@ -47,7 +48,7 @@
             </div>
         </section>
     </main>
-    <script src="./js/script.js"></script>
+    <script src="./js/dashboard.js"></script>
 </body>
 
 </html>
