@@ -23,3 +23,24 @@ document.getElementById('btn-deposit').addEventListener('click', function () {
         depositInputField.value = '';
     }
 })
+
+document.getElementById('btn-withdraw').addEventListener('click', function () {
+    let withdrawInputField = document.getElementById('withdraw-input');
+    let withdrawInputValue = parseFloat(withdrawInputField.value);
+    if (typeof withdrawInputValue === 'number' && withdrawInputValue > 0) {
+        let perviousWithdrawString = document.getElementById('previous-withdraw-value');
+        let perviousWithdrawValue = parseFloat(perviousWithdrawString.innerText);
+        let newWithdrawValue = perviousWithdrawValue + withdrawInputValue;
+        perviousWithdrawString.innerText = newWithdrawValue;
+        let perviousBalanceString = document.getElementById('previous-balance-value');
+        let perviousBalanceValue = parseFloat(perviousBalanceString.innerText);
+        let newBalanceValue = perviousBalanceValue - withdrawInputValue;
+        perviousBalanceString.innerText = newBalanceValue;
+        withdrawInputField.value = '';
+    }
+    else {
+        alert('Please, Input Valid Number Type Withdraw Amount');
+        withdrawInputField.value = '';
+    }
+
+})
